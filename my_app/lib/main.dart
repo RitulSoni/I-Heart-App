@@ -1,7 +1,9 @@
-import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:model_viewer_plus/model_viewer_plus.dart';
 import 'login_page.dart';
+import 'physcian_dashboard.dart';
+import 'model_viewer.dart';
+import 'splash_screen.dart'; // Import the SplashScreen from your splash_screen.dart file
 
 void main() {
   runApp(const MyApp());
@@ -25,38 +27,6 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class SplashScreen extends StatefulWidget {
-  @override
-  _SplashScreenState createState() => _SplashScreenState();
-}
-
-class _SplashScreenState extends State<SplashScreen> {
-  @override
-  void initState() {
-    super.initState();
-    Timer(Duration(seconds: 3), () {
-      Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(builder: (context) => LoginPage()),
-      );
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Theme.of(context).primaryColor,
-      body: Center(
-        child: Image.asset(
-          'assets/I Heart Logo.png', // Replace with the logo 
-          height: 150,
-          width: 150,
-        ),
-      ),
-    );
-  }
-}
-
 class MainPage extends StatefulWidget {
   const MainPage({Key? key, required this.title}) : super(key: key);
   final String title;
@@ -73,13 +43,7 @@ class _MainPageState extends State<MainPage> {
         title: Text(widget.title),
       ),
       body: Center(
-        child: ModelViewer(
-          src: 'assets/Heart.glb',
-          alt: "A 3D model of a heart",
-          ar: true,
-          autoRotate: true,
-          cameraControls: true,
-        ),
+        child: ModelViewerWidget(),
       ),
     );
   }

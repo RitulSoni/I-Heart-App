@@ -12,6 +12,7 @@ class ModelViewerWidget extends StatelessWidget {
       ar: true,
       autoRotate: true,
       cameraControls: true,
+      backgroundColor: const Color.fromARGB(255, 0, 0, 0),
     );
   }
 }

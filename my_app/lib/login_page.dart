@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'main.dart';
-import 'physician_dashboard.dart'; // Import PhysicianDashboard
+import 'PhyscianDash/physician_dashboard.dart'; // Import PhysicianDashboard
 
 class LoginPage extends StatelessWidget {
   @override

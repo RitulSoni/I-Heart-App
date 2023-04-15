@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import '../main.dart'; // Import MainPage from main.dart
 import 'chd_lib.dart'; // Import CHDLib
+import 'patient_profile.dart'; // Import PaitentProfile
 
 class PhysicianDashboard extends StatelessWidget {
   const PhysicianDashboard({Key? key}) : super(key: key);
 
   // Helper method to create custom buttons
-  Widget _customButton(BuildContext context, String text, VoidCallback onPressed) {
+  Widget _customButton(
+      BuildContext context, String text, VoidCallback onPressed) {
     return ElevatedButton(
       onPressed: onPressed,
       style: ElevatedButton.styleFrom(
@@ -31,12 +33,16 @@ class PhysicianDashboard extends StatelessWidget {
           children: [
             _customButton(context, 'Create New Patient Profile', () {
               // TODO: Implement create new patient profile functionality
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const PatientProfile()),
+              );
             }),
             const SizedBox(height: 20),
             _customButton(context, 'View Patient Profiles', () {
               // TODO: Implement view patient profiles functionality
             }),
-             const SizedBox(height: 20),
+            const SizedBox(height: 20),
             _customButton(context, 'View CHD Library', () {
               // Navigate to CHDLib when pressing the "View CHD Library" button
               Navigator.push(
@@ -49,7 +55,8 @@ class PhysicianDashboard extends StatelessWidget {
               // Navigate to MainPage (Model Viewer) when pressing the Demo Mode button
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => MainPage(title: 'Model Viewer Demo')),
+                MaterialPageRoute(
+                    builder: (context) => MainPage(title: 'Model Viewer Demo')),
               );
             }),
           ],

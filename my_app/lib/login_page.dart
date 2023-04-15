@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'main.dart';
+import 'physician_dashboard.dart'; // Import PhysicianDashboard
 
 class LoginPage extends StatelessWidget {
   @override
@@ -18,9 +19,10 @@ class LoginPage extends StatelessWidget {
             // Add your login form here
             ElevatedButton(
               onPressed: () {
+                // Navigate to PhysicianDashboard after successful login
                 Navigator.pushReplacement(
                   context,
-                  MaterialPageRoute(builder: (context) => MainPage(title: 'Flutter Demo Home Page')),
+                  MaterialPageRoute(builder: (context) => PhysicianDashboard()),
                 );
               },
               child: Text('Go to Home Page'),

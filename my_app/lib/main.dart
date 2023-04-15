@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:model_viewer_plus/model_viewer_plus.dart';
 import 'login_page.dart';
-import 'physcian_dashboard.dart';
+import 'physician_dashboard.dart';
 import 'model_viewer.dart';
 import 'splash_screen.dart'; // Import the SplashScreen from your splash_screen.dart file
 

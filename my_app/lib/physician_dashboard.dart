@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'main.dart'; // Import MainPage from main.dart
 
-class PhyscianDashboard extends StatelessWidget {
-  const PhyscianDashboard({Key? key}) : super(key: key);
+class PhysicianDashboard extends StatelessWidget {
+  const PhysicianDashboard({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +37,11 @@ class PhyscianDashboard extends StatelessWidget {
             const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
-                // TODO: Implement demo mode functionality
+                // Navigate to MainPage (Model Viewer) when pressing the Demo Mode button
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => MainPage(title: 'Model Viewer Demo')),
+                );
               },
               child: const Text('Demo Mode'),
             ),

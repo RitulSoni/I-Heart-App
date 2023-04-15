@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../main.dart'; // Import MainPage from main.dart
 import 'chd_lib.dart'; // Import CHDLib
 import 'patient_profile.dart'; // Import PaitentProfile
+import 'view_profile.dart'; //import the profile viewer
 
 class PhysicianDashboard extends StatelessWidget {
   const PhysicianDashboard({Key? key}) : super(key: key);
@@ -41,6 +42,10 @@ class PhysicianDashboard extends StatelessWidget {
             const SizedBox(height: 20),
             _customButton(context, 'View Patient Profiles', () {
               // TODO: Implement view patient profiles functionality
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) =>  ViewProfile()),
+              );
             }),
             const SizedBox(height: 20),
             _customButton(context, 'View CHD Library', () {
@@ -56,7 +61,7 @@ class PhysicianDashboard extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                    builder: (context) => MainPage(title: 'Model Viewer Demo')),
+                    builder: (context) => const MainPage(title: 'Model Viewer Demo')),
               );
             }),
           ],

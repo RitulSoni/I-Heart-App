@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:model_viewer_plus/model_viewer_plus.dart';
 import 'login_page.dart';
 import 'PhyscianDash/physician_dashboard.dart';
 import 'model_viewer.dart';
 import 'splash_screen.dart'; // Import the SplashScreen from your splash_screen.dart file
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const MyApp());
 }
 

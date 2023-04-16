@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "500026849943",
+    "project_id": "iheart-4092e",
+    "storage_bucket": "iheart-4092e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:500026849943:android:7f8316516c782f678a07d2",
+        "android_client_info": {
+          "package_name": "com.example.my_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "500026849943-35s33bt1voh0spn4rgnj04i1f0uuqkgs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCcEB7yboCDjNJF0vhvmRGIjwKT7USfR0o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "500026849943-35s33bt1voh0spn4rgnj04i1f0uuqkgs.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "500026849943-1bjk6bii65fbepmpqq83t0lrvvjbfign.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.myApp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

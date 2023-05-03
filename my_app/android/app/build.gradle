@@ -50,7 +50,7 @@ android {
         applicationId "com.example.my_app"
         // You can update the following values to match your application needs.
         // For more information, see: https://docs.flutter.dev/deployment/android#reviewing-the-gradle-build-configuration.
-        minSdkVersion flutter.minSdkVersion
+        minSdkVersion 19
         targetSdkVersion flutter.targetSdkVersion
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
@@ -75,6 +75,6 @@ dependencies {
 
 dependencies {
     // ...
-    implementation 'com.google.android.material:material:<version>'
+    implementation 'com.google.android.material:material:1.4.0'
     // ...
 }

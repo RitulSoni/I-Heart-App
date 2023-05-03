@@ -48,7 +48,8 @@ class _CHDLibState extends State<CHDLib> {
                   _selectedCHD = newValue;
                 });
               },
-              items: chdTypes.keys.map<DropdownMenuItem<String>>((String value) {
+              items:
+                  chdTypes.keys.map<DropdownMenuItem<String>>((String value) {
                 return DropdownMenuItem<String>(
                   value: value,
                   child: Text(value, style: TextStyle(color: Colors.white)),
@@ -61,6 +62,8 @@ class _CHDLibState extends State<CHDLib> {
             child: _selectedCHD == null
                 ? Container() // empty container if no CHD type is selected
                 : ModelViewer(
+                    key: ValueKey(
+                        chdTypes[_selectedCHD]), // Add the key property
                     src: chdTypes[_selectedCHD]!,
                     alt: "A 3D model of a $_selectedCHD",
                     ar: true,

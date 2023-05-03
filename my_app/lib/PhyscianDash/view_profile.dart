@@ -19,7 +19,7 @@ class _ViewProfileState extends State<ViewProfile> {
     {
       'name': 'Jane Smith',
       'birthday': '02/02/1990',
-      'defects': ['PDS'],
+      'defects': ['PDA'],
       'size': 'Small (2mm)',
       'statements': ['Your defect is likely to close on its own'],
       'language': 'Spanish'

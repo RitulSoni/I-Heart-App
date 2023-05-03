@@ -15,7 +15,7 @@ class _PatientProfileState extends State<PatientProfile> {
   Map<String, bool> _defects = {
     'ASD': false,
     'VSD': false,
-    'PDS': false,
+    'PDA': false,
   };
   String? _size;
   bool _surgeryRequired = false;

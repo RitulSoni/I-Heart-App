@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:model_viewer_plus/model_viewer_plus.dart';
 
 class CHDLib extends StatefulWidget {
   const CHDLib({Key? key}) : super(key: key);
@@ -12,9 +13,10 @@ class _CHDLibState extends State<CHDLib> {
 
   // Define CHD types and their corresponding .glb files
   final Map<String, String> chdTypes = {
-    'CHD Type 1': 'assets/chd_type_1.glb',
-    'CHD Type 2': 'assets/chd_type_2.glb',
-    'CHD Type 3': 'assets/chd_type_3.glb',
+    'ASD': 'assets/ASD.glb',
+    'PDA': 'assets/PDA.glb',
+    'VSD': 'assets/VSD.glb',
+    'Modified': 'assets/Modifiers.glb'
     // Add more CHD types and their corresponding .glb files here
   };
 
@@ -45,8 +47,6 @@ class _CHDLibState extends State<CHDLib> {
                 setState(() {
                   _selectedCHD = newValue;
                 });
-                // Load the .glb file with your model viewer here
-                print('Selected .glb file: ${chdTypes[newValue]}');
               },
               items: chdTypes.keys.map<DropdownMenuItem<String>>((String value) {
                 return DropdownMenuItem<String>(
@@ -57,6 +57,18 @@ class _CHDLibState extends State<CHDLib> {
             ),
           ),
           // Add your model viewer here
+          Expanded(
+            child: _selectedCHD == null
+                ? Container() // empty container if no CHD type is selected
+                : ModelViewer(
+                    src: chdTypes[_selectedCHD]!,
+                    alt: "A 3D model of a $_selectedCHD",
+                    ar: true,
+                    autoRotate: true,
+                    cameraControls: true,
+                    backgroundColor: const Color.fromARGB(255, 0, 0, 0),
+                  ),
+          ),
         ],
       ),
     );
